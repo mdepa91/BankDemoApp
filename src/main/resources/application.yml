@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    username: sa
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    platform: h2
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create
+
+app:
+  free-amount-service:
+    url: https://api.random.org/json-rpc/2/invoke
+    api-key: 3f90a0ec-032d-4f32-b41c-60af0160f0fd
+    json-rpc-version: 2.0
+    default-decimal-places: 2
+
+logging:
+  level:
+    root: INFO
